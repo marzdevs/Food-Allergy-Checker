@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
 const RecipeSearch = () => {
   const [ingredients, setIngredients] = useState("");
   const [recipes, setRecipes] = useState([]);
+
 
   const handleInputChange = (e) => {
     setIngredients(e.target.value);
@@ -10,7 +12,7 @@ const RecipeSearch = () => {
 
   const searchRecipes = () => {
     fetch(
-      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=c3f6c6e3127d4741ac7cf45b1e23305b&ingredients=${ingredients}`
+      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${import.meta.env.VITE_KEY}&ingredients=${ingredients}`
     )
       .then((response) => response.json())
       .then((data) => {

@@ -4,6 +4,8 @@ import IngredientInput from "./IngredientInput";
 import AllergyChecker from "./AllergyChecker";
 import allergensData from "./allergens.json";
 import RecipeSearch from "./RecipeSearch";
+
+
 const App = () => {
   const [ingredients, setIngredients] = useState([]);
   const allergens = allergensData.allergens;

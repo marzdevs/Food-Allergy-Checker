@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+
 const IngredientInput = () => {
-  const [ingredient, setIngredient] = useState("");
-  const [ingredientDetails, setIngredientDetails] = useState(null);
-  const [apiKey] = useState("c3f6c6e3127d4741ac7cf45b1e23305b"); // Replace with your actual API key
+const [ingredient, setIngredient] = useState("");
+const [ingredientDetails, setIngredientDetails] = useState(null);
+
 
   const handleInputChange = (e) => {
     setIngredient(e.target.value);
@@ -11,7 +12,7 @@ const IngredientInput = () => {
 
   const fetchIngredientDetails = () => {
     fetch(
-      `https://api.spoonacular.com/food/ingredients/search?apiKey=${apiKey}&query=${ingredient}`
+      `https://api.spoonacular.com/food/ingredients/search?apiKey=apiKey=${import.meta.env.VITE_KEY}&query=${ingredient}`
     )
       .then((response) => response.json())
       .then((data) => {
