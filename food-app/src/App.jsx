@@ -15,7 +15,7 @@ const App = () => {
   };
 
   return (
-    <div class="flex items-center p-4">
+    <div class="flex items-center p-4 float-left">
       <h1>Food Allergy Checker</h1>
       <IngredientInput onAddIngredient={addIngredient} class="flow-root"/>
       <RecipeSearch ingredients={ingredients} class="flow-root"/>
