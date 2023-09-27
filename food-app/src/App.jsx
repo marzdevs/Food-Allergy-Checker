@@ -15,11 +15,11 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div class="flex items-center p-4">
       <h1>Food Allergy Checker</h1>
-      <IngredientInput onAddIngredient={addIngredient} />
-      <RecipeSearch ingredients={ingredients} />
-      <AllergyChecker ingredients={ingredients} allergens={allergens} />
+      <IngredientInput onAddIngredient={addIngredient} class="flow-root"/>
+      <RecipeSearch ingredients={ingredients} class="flow-root"/>
+      <AllergyChecker ingredients={ingredients} allergens={allergens} class="flow-root"/>
     </div>
   );
 };
