@@ -1,3 +1,5 @@
+- add allergies(ingredients), allergies selected will filter out the ones that have that aspecific ingredient by using !==
+
 Building an app that helps customers determine if a food product is halal or not can be a valuable resource for many people who follow halal dietary guidelines. Here are the steps you can follow to create such an app:
 
 1. **Market Research and Planning**:
