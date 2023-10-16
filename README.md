@@ -1,6 +1,6 @@
 Your project description looks good, but you can enhance it by providing more context and information about the technologies you used. Here's an improved version of your project description:
 
-# Halal-Food
+# [Food Allergy Checker](https://fascinating-crisp-96c7ec.netlify.app/)
 
 ## Description
 
