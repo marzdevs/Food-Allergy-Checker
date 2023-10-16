@@ -1,10 +1,10 @@
 Your project description looks good, but you can enhance it by providing more context and information about the technologies you used. Here's an improved version of your project description:
 
-# Halal-Food
+# [Food Allergy Checker](https://fascinating-crisp-96c7ec.netlify.app/)
 
 ## Description
 
-Halal-Food is a web application that empowers users to make informed dietary choices by helping them identify foods that meet their specific requirements, including dietary restrictions and preferences. This project was developed using a stack of modern technologies, including Node.js, React, JavaScript, and Tailwind CSS.
+Food Allergy Checker is a web application that empowers users to make informed dietary choices by helping them identify foods that meet their specific requirements, including dietary restrictions and preferences. This project was developed using a stack of modern technologies, including Node.js, React, JavaScript, and Tailwind CSS.
 
 ## Features to be added
 
@@ -19,7 +19,7 @@ The web application will soon include the following key features:
 If you wish to run the application locally, follow these installation instructions:
 
 1. Clone this repository: `git clone https://github.com/marzdevs/halal-food.git`
-2. Navigate to the project folder: `cd halal-food`
+2. Navigate to the project folder: `cd food-app`
 3. Install the necessary dependencies using Node.js:
 
    ```bash
@@ -48,7 +48,6 @@ Halal-Food simplifies the process of finding foods that meet your specific dieta
 
 4. To explore other ingredients or modify your search, simply click the red "x" icon on the right, and you'll be taken back to the previous window.
 
-With the combination of Node.js, React, JavaScript, and Tailwind CSS, Halal-Food offers a user-friendly experience for individuals with diverse dietary needs.
 
 
 
