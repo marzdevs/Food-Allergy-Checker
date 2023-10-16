@@ -19,7 +19,7 @@ The web application will soon include the following key features:
 If you wish to run the application locally, follow these installation instructions:
 
 1. Clone this repository: `git clone https://github.com/marzdevs/halal-food.git`
-2. Navigate to the project folder: `cd halal-food`
+2. Navigate to the project folder: `cd food-app`
 3. Install the necessary dependencies using Node.js:
 
    ```bash
