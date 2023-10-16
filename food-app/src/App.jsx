@@ -15,13 +15,25 @@ const App = () => {
   };
 
   return (
-    <div class="flex items-center p-4 float-left">
-      <h1>Food Allergy Checker</h1>
-      <IngredientInput onAddIngredient={addIngredient} class="flow-root"/>
+    <div style={containerStyle}>
+      <h1 style={titleStyle}>Food Allergy Checker</h1>
+      {/* <IngredientInput onAddIngredient={addIngredient} class="flow-root"/> */}
       <RecipeSearch ingredients={ingredients} class="flow-root"/>
-      <AllergyChecker ingredients={ingredients} allergens={allergens} class="flow-root"/>
+      {/* <AllergyChecker ingredients={ingredients} allergens={allergens} class="flow-root"/> */}
     </div>
   );
+};
+
+const containerStyle = {
+  display: "flex",
+  flexDirection: "column", // Stack children vertically
+  alignItems: "center",      // Center horizontally
+  justifyContent: "center",  // Center vertically
+  height: "100vh",           // Takes the full height of the viewport
+};
+
+const titleStyle = {
+  textAlign: "center",
 };
 
 export default App;

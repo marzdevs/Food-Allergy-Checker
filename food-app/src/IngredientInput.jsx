@@ -54,7 +54,7 @@ const [ingredientDetails, setIngredientDetails] = useState(null);
             />
           )}
           <p>Aisle: {ingredientDetails.aisle}</p>
-          {/* Add more information as needed */}
+            
         </div>
       )}
     </div>
