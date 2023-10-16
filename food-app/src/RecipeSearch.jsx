@@ -34,20 +34,31 @@ const RecipeSearch = () => {
     left: "0",
     width: "100%",
     height: "100%",
-    background: "rgba(0, 0, 0, 0.5)",
+    background: "#F1EFEB",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   };
 
   const modalContentStyle = {
-    background: "white",
+    background: "#F6F6F6",
     padding: "20px",
     borderRadius: "5px",
-    maxHeight: "80vh",  
-    overflowY: "auto",  
-
+    maxHeight: "80vh",
+    overflowY: "auto",
+    scrollbarWidth: "thin",
+    "&::-webkit-scrollbar": {
+      width: "8px",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "#007bff",
+      borderRadius: "5px",
+    },
+    "&::-webkit-scrollbar-track": {
+      background: "#f1f1f1",
+    },
   };
+
   
 const closeButtonStyle = {
   position: "absolute",
