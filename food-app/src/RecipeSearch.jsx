@@ -20,87 +20,124 @@ const RecipeSearch = () => {
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
-        openModal();
+        setIsModalOpen(true); // Open the modal
       })
       .catch((error) => {
         console.error("Error fetching recipes:", error);
       });
   };
 
-  return (
-  <div style={containerStyle}>
-    <h2>Search Recipes by Ingredients</h2>
-    <input
-      type="text"
-      placeholder="Enter ingredients (comma-separated)"
-      style={inputStyle}
-      value={ingredients}
-      onChange={handleInputChange}
-    />
-    <button style={buttonStyle} onClick={searchRecipes}>
-      Search
-    </button>
-    {isModalOpen && ( // Render the modal when isModalOpen is true
-      <div style={modalStyle}>
-        <div style={modalContentStyle}>
-          <button style={closeButtonStyle} onClick={closeModal}>
-            Close
-          </button>
-          <h3>Recipes</h3>
-          <ul style={recipeListStyle}>
-            {recipes.map((recipe) => (
-              <li style={recipeItemStyle} key={recipe.id}>
-                <img
-                  src={recipe.image}
-                  alt={`${recipe.title} Image`}
-                  style={recipeImageStyle}
-                />
-                {recipe.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    )}
-  </div>
-);
+  // Define styles for the modal and its content
+  const modalStyle = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    background: "rgba(0, 0, 0, 0.5)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
 
-// Define inline styles
-const containerStyle = {
-  maxWidth: "400px",
-  margin: "0 auto",
-  padding: "20px",
-  textAlign: "center",
-};
+  const modalContentStyle = {
+    background: "white",
+    padding: "20px",
+    borderRadius: "5px",
+    maxHeight: "80vh",  
+    overflowY: "auto",  
 
-const inputStyle = {
-  width: "100%",
-  padding: "10px",
-  marginBottom: "10px",
-};
-
-const buttonStyle = {
-  padding: "10px 20px",
-  backgroundColor: "#007bff",
-  color: "white",
+  };
+  
+const closeButtonStyle = {
+  position: "absolute",
+  top: "10px",
+  right: "10px",
+  fontSize: "24px",       
+  color: "red",           
+  background: "none",
   border: "none",
   cursor: "pointer",
 };
 
-const recipeListStyle = {
-  listStyle: "none",
-  padding: 0,
-};
 
-const recipeItemStyle = {
-  display: "flex",
-  alignItems: "center",
-  marginBottom: "10px",
-};
+  // Define other styles
+  const containerStyle = {
+    maxWidth: "400px",
+    margin: "0 auto",
+    padding: "20px",
+    textAlign: "center",
+  };
 
-const recipeImageStyle = {
-  marginRight: "10px",
-  borderRadius: "5px",
+  const inputStyle = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "10px",
+  };
+
+  const buttonStyle = {
+    padding: "10px 20px",
+    backgroundColor: "#007bff",
+    color: "white",
+    border: "none",
+    cursor: "pointer",
+  };
+
+  const recipeListStyle = {
+    listStyle: "none",
+    padding: 0,
+  };
+
+  const recipeItemStyle = {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "10px",
+  };
+
+  const recipeImageStyle = {
+    marginRight: "10px",
+    borderRadius: "5px",
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h2>Search Recipes by Ingredients</h2>
+      <input
+        type="text"
+        placeholder="Enter ingredients (comma-separated)"
+        style={inputStyle}
+        value={ingredients}
+        onChange={handleInputChange}
+      />
+      <button style={buttonStyle} onClick={searchRecipes}>
+        Search
+      </button>
+      {isModalOpen && ( // Render the modal when isModalOpen is true
+        <div style={modalStyle}>
+          <div style={modalContentStyle}>
+          <button
+              style={closeButtonStyle}
+              onClick={closeModal}>
+              &times;
+            </button>
+            <h3>Recipes</h3>
+            <ul style={recipeListStyle}>
+              {recipes.map((recipe) => (
+                <li style={recipeItemStyle} key={recipe.id}>
+                  <img
+                    src={recipe.image}
+                    alt={`${recipe.title} Image`}
+                    style={recipeImageStyle}
+                  />
+                  {recipe.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default RecipeSearch;
