@@ -34,7 +34,7 @@ If you wish to run the application locally, follow these installation instructio
 
 ## Usage
 
-Halal-Food simplifies the process of finding foods that meet your specific dietary needs. Here's how it works:
+Food Allergy Checker simplifies the process of finding foods that meet your specific dietary needs. Here's how it works:
 
 1. Input the ingredients or dietary preferences you're looking for in your food.
 
